@@ -72,11 +72,7 @@ namespace wpfgyakorl
 
         private void alkalmaz(object sender, RoutedEventArgs e)
         {
-            if ()
-            {
-                kombi.Visibility = Visibility.Visible;
-            }
-            else if (checkhal.IsChecked == false || checkhal.IsChecked == true && kombi.SelectedValue.ToString() == "Látható")
+            if (checkhal.IsChecked == false)
             {
                 kombi.Visibility = Visibility.Visible;
             }

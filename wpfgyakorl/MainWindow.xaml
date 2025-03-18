@@ -58,12 +58,12 @@
         </Grid>
 
         <StackPanel Grid.Column="2" Orientation="Vertical">
-            <ComboBox x:Name="kombi">
+            <ComboBox x:Name="kombi" SelectionChanged="valt">
                 <!--<ComboBoxItem Content="w"/>
                 <ComboBoxItem Content="f"/>
                 <ComboBoxItem Content="?"/>-->
             </ComboBox>
-            <CheckBox x:Name="checkhal" Content="Combobox eltűntetése" Checked="alkalmaz"/> <!--Halrudacskák?-->
+            <CheckBox x:Name="checkhal" Content="Combobox eltűntetése" Checked="alkalmaz" Unchecked="alkalmaz"/> <!--Halrudacskák?-->
         </StackPanel>
 
         <Border Grid.Row="1" Background="AliceBlue"/>
