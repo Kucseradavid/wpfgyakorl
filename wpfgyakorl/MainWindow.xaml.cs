@@ -8,6 +8,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using wpfgyakorl.Data;
 
 namespace wpfgyakorl
 {
@@ -16,6 +17,9 @@ namespace wpfgyakorl
     /// </summary>
     public partial class MainWindow : Window
     {
+        public Person Person { get; set; }
+        public Sum Sum { get; set; }
+
         public MainWindow()
         {
             InitializeComponent();
@@ -40,18 +44,23 @@ namespace wpfgyakorl
             kombi.Items.Add("Látható");
             kombi.Items.Add("Rejtett");
             kombi.Items.Add("Összenyomott");
-
             kombi.SelectedIndex = 0;
+
+            Person = new Person();
+            Sum = new Sum();
+            this.DataContext = Sum;
         }
 
         private void MutasdAzUzenetet(object sender, RoutedEventArgs e)
         {
-            input.Text = "";
+            //input.Text = "";
+            //Person.FirstName = "Zigó";
+            Person.TwoThousandYearsLater();
         }
 
         private void Kiiras(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show(box.Text);
+            MessageBox.Show(Convert.ToString(Person.Age));
         }
 
         private void ValamiValtozott(object sender, TextChangedEventArgs e)
