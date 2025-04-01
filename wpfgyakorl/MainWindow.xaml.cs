@@ -17,8 +17,7 @@ namespace wpfgyakorl
     /// </summary>
     public partial class MainWindow : Window
     {
-        public Person Person { get; set; }
-        public Sum Sum { get; set; }
+        public DataClass Data { get; set; } = new DataClass();
 
         public MainWindow()
         {
@@ -46,23 +45,22 @@ namespace wpfgyakorl
             kombi.Items.Add("Összenyomott");
             kombi.SelectedIndex = 0;
 
-            Person = new Person();
-            Sum = new Sum();
-            this.DataContext = Sum;
+            this.DataContext = Data;
         }
 
         private void MutasdAzUzenetet(object sender, RoutedEventArgs e)
         {
             //input.Text = "";
-            //Person.FirstName = "Zigó";
-            //Person.TwoThousandYearsLater();
-            Sum.osszead();
+            
+            Data.Sum.osszead();
         }
 
-        /*private void Kiiras(object sender, RoutedEventArgs e)
+        private void Kiiras(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show(Convert.ToString(Person.Age));
-        }*/
+            MessageBox.Show(Convert.ToString(Data.Person.Age));
+            //Person.FirstName = "Zigó";
+            Data.Person.TwoThousandYearsLater();
+        }
 
         private void ValamiValtozott(object sender, TextChangedEventArgs e)
         {
