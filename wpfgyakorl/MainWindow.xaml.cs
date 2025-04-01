@@ -55,13 +55,14 @@ namespace wpfgyakorl
         {
             //input.Text = "";
             //Person.FirstName = "Zigó";
-            Person.TwoThousandYearsLater();
+            //Person.TwoThousandYearsLater();
+            Sum.osszead();
         }
 
-        private void Kiiras(object sender, RoutedEventArgs e)
+        /*private void Kiiras(object sender, RoutedEventArgs e)
         {
             MessageBox.Show(Convert.ToString(Person.Age));
-        }
+        }*/
 
         private void ValamiValtozott(object sender, TextChangedEventArgs e)
         {
